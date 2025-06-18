@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: #f5f6fa;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2f3542;
+    }
+
+    #sortOptions {
+      display: block;
+      margin: 0 auto 20px auto;
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    thead {
+      background-color: #1e90ff;
+      color: white;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tbody tr:hover {
+      background-color: #f1f2f6;
+    }
+
+    #pagination {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .page-link {
+      display: inline-block;
+      padding: 8px 12px;
+      margin: 0 4px;
+      background-color: #1e90ff;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .page-link.active {
+      background-color: #3742fa;
+    }
+
+    .page-link:hover {
+      background-color: #57606f;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Project Listings</h2>
+
+  <select id="sortOptions">
+    <option value="recent">1. Recent Projects</option>
+    <option value="category">2. Order By Category Name ASC</option>
+    <option value="username">3. Order By Username ASC</option>
+    <option value="title">4. Order By Project Title ASC</option>
+  </select>
+
+  <table id="projectTable" border="1">
+    <thead>
+      <tr>
+        <th>Project Title</th>
+        <th>Username</th>
+        <th>Category Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dynamically populated -->
+    </tbody>
+  </table>
+
+  <div id="pagination"></div>
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Your JS file -->
+  <script src="js/script.js"></script>
+
+</body>
+</html>
