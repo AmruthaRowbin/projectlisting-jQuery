@@ -10,7 +10,7 @@ exports.getProjects = (req, res) => {
   let sortQuery = 'p.created_at DESC';
   if (sort === 'category') sortQuery = 'c.category_name ASC';
   else if (sort === 'username') sortQuery = 'u.username ASC';
-  else if (sort === 'title') sortQuery = 'p.project_title ASC';
+  else if (sort === 'title') sortQuery = 'p.title ASC';
 
   const query = `
     SELECT p.title, u.username, c.category_name
